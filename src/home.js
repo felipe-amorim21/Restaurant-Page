@@ -27,6 +27,7 @@ function homePage() {
     homeBtn.classList.add('button')
     contextBtn.classList.add('contextbtn')
 
+
     menuBtn.id = 'menubtn'
     aboutBtn.id = 'aboutbtn'
     homeBtn.id = 'homebtn'
@@ -41,6 +42,8 @@ function homePage() {
     
     backgroundImage.src = image
     content.appendChild(backgroundImage)
+
+    content.classList.add('over')
 
     return(content)
 

@@ -45,6 +45,8 @@ function aboutPage(){
     backgroundImage.src = image
     content.appendChild(backgroundImage)
 
+    content.classList.add('over')
+
     return content
 
 }
