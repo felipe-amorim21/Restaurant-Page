@@ -1,8 +1,18 @@
-import homePage from "./home";
+import homePage from './home';
+import aboutPage from './about';
 
-function loadpage(){
-    homePage()
+const contentContainer = document.getElementById('content')
 
-}
+function renderPage(page) {
+    contentContainer.innerHTML = page().outerHTML
+  }
 
-loadpage()
+renderPage(homePage)
+
+contentContainer.addEventListener('click', (event) => {
+    if (event.target.id === 'aboutbtn') {
+      renderPage(aboutPage)
+    } else if (event.target.id === 'homebtn') {
+      renderPage(homePage)
+    }
+  })
